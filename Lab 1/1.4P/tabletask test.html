@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WAI Table Task</title>
+    <meta charset="utf-8">
+    <meta name="language" content="english">
+    <meta name="keywords" content="Accessibility,Lab,Tasks">
+    <meta name="description" content="WAI Table Task">
+  </head>
+  <body>
+    <h1>WAI Table Example</h1>
+    <table>
+      <caption>
+        Team Sales from 2013-16 (in millions of $)
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" id="teamHeading">Team</th>
+          <th scope="col" id="y2013Heading">2013</th>
+          <th scope="col" id="y2014Heading">2014</th>
+          <th scope="col" id="y2015Heading">2015</th>
+          <th scope="col" id="y2016Heading">2016</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" id="alphaHeading">Alpha</th>
+          <td headers="y2013Heading alphaHeading">80</td>
+          <td headers="y2014Heading alphaHeading">90</td>
+          <td headers="y2015Heading alphaHeading">94</td>
+          <td headers="y2016Heading alphaHeading">96</td>
+        </tr>
+        <tr>
+          <th scope="row" id="bravoHeading">Bravo</th>
+          <td headers="y2013Heading bravoHeading">55</td>
+          <td headers="y2014Heading bravoHeading">59</td>
+          <td headers="y2015Heading bravoHeading">55</td>
+          <td headers="y2016Heading bravoHeading">59</td>
+        </tr>
+        <tr>
+          <th scope="row" id="charlieHeading">Charlie</th>
+          <td headers="y2013Heading charlieHeading">25</td>
+          <td headers="y2014Heading charlieHeading">25</td>
+          <td headers="y2015Heading charlieHeading">28</td>
+          <td headers="y2016Heading charlieHeading">30</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

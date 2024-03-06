@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <style>
+        body {
+            background-image: url("file:///Users/khoale/Downloads/COS30043/1.1P/guitarist.webp");
+            background-size: cover;
+            color: white; /* white font */
+        }
+
+        #logo {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Player by Khoa Le</h1>
+    
+    <h2>Upload and Play Music</h2>
+    
+    <input type="file" id="musicFiles" accept="audio/*" multiple onchange="handleFileSelect(event)">
+    
+    <select id="songSelector" onchange="playSelectedSong()">
+        <option value="" disabled selected>Select a song</option>
+    </select>
+    
+    <audio id="audioPlayer" controls>
+        <source id="audioSource" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            const songSelector = document.getElementById("songSelector");
+            
+            while (songSelector.firstChild) {
+                songSelector.removeChild(songSelector.firstChild);
+            }
+            
+            for (let i = 0; i < files.length; i++) {
+                const option = document.createElement("option");
+                option.text = files[i].name;
+                option.value = URL.createObjectURL(files[i]);
+                songSelector.add(option);
+            }
+        }
+        
+        function playSelectedSong() {
+            const songSelector = document.getElementById("songSelector");
+            const audioPlayer = document.getElementById("audioPlayer");
+            const audioSource = document.getElementById("audioSource");
+            
+            audioSource.src = songSelector.value;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
