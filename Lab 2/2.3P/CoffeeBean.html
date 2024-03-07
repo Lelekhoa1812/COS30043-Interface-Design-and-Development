@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liam's Roaster Bean</title>
+    <style>
+        body {
+            background-color: rgb(1, 17, 54);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;           
+            padding: 20px;
+            position: relative; 
+        }
+        .header {
+            background-color: rgba(238, 230, 149, 0.632);
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            width: fit-content; 
+            position: absolute; 
+            top: 5px; 
+            left: 5px; 
+        }
+        .exclusive {
+            background-color: rgb(85, 53, 8);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 60%; 
+            float: left; 
+            margin-top: 50px;
+            height: 400px; 
+        }
+        .exclusive-content {
+            width: 50%; 
+            float: left; 
+        }
+        .exclusive-image {
+            width: 50%; 
+            float: left; 
+        }
+        .exclusive-image img {
+            max-width: 100%; 
+            height: 100%; 
+        }
+        .best-sellers {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        .best-seller {
+            width: 33.33%;
+            padding: 10px;
+            background-color: rgba(115, 113, 113, 0.558);
+            box-sizing: border-box; 
+        }
+        .best-seller img {
+            max-width: 100%;
+            height: auto;
+            width: 100%; 
+        }
+        .best-sellers img {
+            height: 50%; 
+        }
+        .best-seller p {
+            margin-top: 10px;
+        }
+        .about-us {
+            background-color: rgb(18, 17, 17);
+            padding: 10px;
+            margin-bottom: 80px; /* Increased margin to move it down */
+            clear: both; 
+            margin-top: 30px; 
+        }
+        .footer {
+            background-color: white;
+            text-align: left; 
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: black; 
+        }
+        .find-more-container {
+            text-align: center; /* Center the content */
+        }
+        .find-more-box {
+            background-color: Ivory;
+            color: black;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .best-sellers-heading {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Liam's Roaster Bean
+        </div>
+        <div class="exclusive">
+            <div class="exclusive-content">
+                <h2>Our Exclusive</h2>
+                <p>The Irish Robusta bean, also known as "Coffea Canephora var Robusta", is a variety of coffee bean renowned for its strong and robust flavor profile, this bean is characterized by its high caffeine content, making it popular among coffee enthusiasts seeking a bold and energizing brew.</p>
+                <p>Unlike its counterpart, Arabica, Robusta beans possess a distinctively bold and bitter taste, often described as earthy or woody.</p>
+                <p>NOW $40 per kilogram</p>
+            </div>
+            <div class="exclusive-image">
+                <img src="irish_robusta.webp" alt="Image 1">
+            </div>
+        </div>
+        <h2 class="best-sellers-heading">Best Sellers</h2>
+        <div class="best-sellers">
+            <div class="best-seller">
+                <img src="vn_r.png" alt="Image 2">
+                <p>Vietnamese Robusta</p>
+            </div>
+            <div class="best-seller">
+                <img src="ql_g.png" alt="Image 3">
+                <p>Queensland Greenbean</p>
+            </div>
+            <div class="best-seller">
+                <img src="br_a.png" alt="Image 4">
+                <p>Brazil Arabica</p>
+            </div>
+        </div>
+        <div class="best-sellers">
+            <div class="best-seller">
+                <img src="cl_a.png" alt="Image 5">
+                <p>Colombia Arabica</p>
+            </div>
+            <div class="best-seller">
+                <img src="nsw_a.png" alt="Image 6">
+                <p>NSW Arabica</p>
+            </div>
+            <div class="best-seller">
+                <img src="p_a.png" alt="Image 7">
+                <p>Peru Arabica</p>
+            </div>
+        </div>
+        <div class="find-more-container">
+            <div class="find-more-box">Find More</div>
+        </div>
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>Liam's Roaster Bean, founded in 2023, imports exclusive coffee beans to Australia, promising a delicate taste experience. We meticulously source beans from global regions for premium quality and unparalleled satisfaction.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Liam's Roaster Bean Au. All rights reserved.
+    </footer>
+</body>
+</html>
