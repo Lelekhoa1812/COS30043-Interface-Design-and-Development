@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- link to material design -->
+	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+	
+	<!-- link to vuetify -->
+	<link href="https://cdn.jsdelivr.net/npm/vuetify@3.1.11/dist/vuetify.min.css" rel="stylesheet"> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div id="app">
+    <v-app>
+		<v-app-bar app>
+			<p> this is an app bar</p>
+		</v-app-bar>
+
+ 		<v-main>
+        <v-container fluid>
+			<p>Hello World!</p>
+
+			<v-btn  color="primary" >
+				<v-icon>mdi-pencil</v-icon>    <!-- mdi: material design icon -->
+			</v-btn>
+			<v-btn   color="error" >
+				<v-icon>mdi-alarm</v-icon>
+			</v-btn>
+        </v-container>
+        
+        <v-container fluid>
+			<v-alert type="success">
+				I'm a success alert.
+			</v-alert>
+      
+			<v-alert type="info">
+				I'm an info alert.
+			</v-alert>
+        </v-container>
+		</v-main>
+
+		<v-footer app>
+			<p> this is a footer</p>      
+		</v-footer>
+    </v-app>  
+	</div>
+
+	<!-- link to vue -->
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	
+	<!-- link to vuetify  -->
+ 	<script src="https://cdn.jsdelivr.net/npm/vuetify@3.1.11/dist/vuetify.min.js"></script>
+ 	 
+	<script>
+	const { createApp } = Vue
+	const { createVuetify } = Vuetify
+	
+	const app = createApp()
+	const vuetify = createVuetify()
+	
+	app.use(vuetify).mount('#app')
+
+	</script>
+</body> 
+</html>
