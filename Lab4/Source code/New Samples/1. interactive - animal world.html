@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Animal World</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<style>
+img {width:100%;}
+</style>
+</head>
+
+<body>
+	<h1>Animal World</h1>
+	<div id="app">
+		<!-- -------------------   select cats or dogs ------------ -->
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+				<!--
+				<input type="radio" v-model="animal" value="cat">Cats
+				<input type="radio" v-model="animal" value="dog">Dogs
+				-->
+				<button v-on:click="animal='cat'" >Cats</button>
+				<button v-on:click="animal='dog'" >Dogs</button>
+				</div>
+			</div>
+		</div>
+		<!-- -------------------   show cats ------------ -->
+		<div v-if="animal == 'cat'" class="container">
+			<div class="row">
+				<div class="col-4  "><img src="cat1.png" alt="cat 1"></div>
+				<div class="col-4  "><img src="cat2.png" alt="cat 1"></div>
+				<div class="col-4  "><img src="cat3.png" alt="cat 1"></div>
+			</div>
+		</div>
+		<!-- -------------------   show dogs  ------------ -->
+		<div v-else class="container">
+			<div class="row">
+				<div class="col-4"><img src="dog1.png" alt="cat 1"></div>
+				<div class="col-4"><img src="dog2.png" alt="cat 1"></div>
+				<div class="col-4"><img src="dog3.png" alt="cat 1"></div>
+			</div>
+		</div>
+  
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<!-- You can link to the vue.js in your own computer. I linked to the CDN for easy distribution. -->
+	
+	<script>
+		const { createApp } = Vue
+		createApp({	 //create a new application instance
+			data() {     // data option
+				return {animal:'cat'
+				}
+			}
+		}).mount('#app')   // mount the app to dom element
+	</script>
+</body>
+
+</html>

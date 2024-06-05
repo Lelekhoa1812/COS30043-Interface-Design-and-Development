@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>First Vue</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</head>
+
+<body>
+	<h1>First Vue</h1>
+	<div id="app">
+		<p>Please enter your name:<input type="text" v-model="yourName"  /> 
+		                         <!-- Directives are special attributes with the v- prefix. -->
+		</p>
+
+		<p>Hi, I am {{yourName  }}.</p>
+		
+		<button v-on:click="yourName='Vue'">Change your name to Vue.</button>
+	</div>
+ 
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<!-- You can link to the vue.js in your own computer. I linked to the CDN for easy distribution. -->
+	
+	<script>
+		const { createApp } = Vue
+		createApp({	 //create a new application instance
+			data() {    
+				return { yourName: ''
+				}
+			}
+		}).mount('#app')   // mount the app to dom element
+	</script>
+</body>
+
+</html>

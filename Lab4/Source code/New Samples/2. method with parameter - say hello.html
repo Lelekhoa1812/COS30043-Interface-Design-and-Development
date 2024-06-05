@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Say Hello</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</head>
+
+<body>
+	<h1>Say Hello</h1>
+	<div id="app">
+		<p>Please enter your first name:<input type="text" v-model="fname"  /> 
+		</p>
+		<p>Please enter the time (0-23):<input type="text" v-model="time"  /> 
+		</p>
+
+		<p> {{sayhello(fname,time)}}.</p>
+			 
+	</div>
+	
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<!-- You can link to the vue.js in your own computer. I linked to the CDN for easy distribution. -->
+	
+	<script>
+	const { createApp } = Vue
+	createApp({	 //create a new application instance
+			data() {     // data option
+				return {fname:'Amy', time:'3'
+				}
+			},
+			methods:{  // methods option
+				sayhello: function (fname, time) {
+							//shorthand: sayhello (fname, time) {...  }	
+					if (time<0 || time > 23)
+						msg = "You selected a wrong time."
+					else if (time < 12)
+						msg = "Good morning!"
+					else if (time < 18)
+						msg = "Good afternoon!"
+					else
+						msg = "Good evening!"
+					
+					return "Hi, " + this.fname + ". " + msg
+				}
+			}			
+		}).mount('#app')   // mount the app to dom element
+	</script>
+</body>
+
+</html>

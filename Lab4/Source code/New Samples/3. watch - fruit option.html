@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Watch - Fruit Option</title>
+	<meta charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</head>
+
+<body>
+	<h1>Watch - Fruit Option</h1>
+	<div id="app">
+		<p>Please enter your favoriate fruit:<input type="text" v-model.lazy="fruit"  />{{fruit}} 
+		<!--  By default, v-model is evaluated every time the input event is fired (ie. on keypress or paste.) If you’d rather wait until the user has finished inputting and unfocused the field, you can use the v-model.lazy modifier to have v-model listen to the change event instead.   -->
+		</p>
+		<h2>{{msg}}</h2>
+	</div>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+	<script>
+	const { createApp } = Vue
+
+	createApp({	 //create a new application instance
+		data() {     // data
+			return {fruit:'apple' , msg:''
+			}
+		},
+		watch:  { //watch
+			fruit: function (newV, oldV){
+				this.msg = "Your old option is " + oldV +".   Your new option is " + newV +'.';
+			}
+		}
+
+	}).mount('#app')   // mount the app to dom element
+	</script>
+	
+</body>
+
+</html>
